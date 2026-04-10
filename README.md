@@ -1,1 +1,1 @@
-# Gerador-de-Curr-culos
+# Gerador-de-Curriculos
