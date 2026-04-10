@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Currículo — Rafael Santos de Santana</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="topbar-left">
+            <h1>Editor de Currículo</h1>
+            <div class="version-toggle">
+                <button class="version-btn active" onclick="switchVersion('estagio')">Estágio</button>
+                <button class="version-btn" onclick="switchVersion('junior')">Júnior</button>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <button class="btn btn-outline" onclick="resetData()">⟳ Resetar</button>
+            <button class="btn btn-primary" onclick="generatePDF()">↓ Gerar PDF</button>
+        </div>
+    </div>
+
+    <div class="app">
+        <div class="sidebar" id="sidebar"></div>
+        <div class="preview-area">
+            <div class="resume-page" id="resume"></div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="spinner"></div>
+        <p>Gerando PDF...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
